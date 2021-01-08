@@ -11,7 +11,7 @@ Retrieves a list of all the zombies.
 The list of all the zombies:
 
 *`JSON`*
-```json
+```
 [
   {  
     "id": <number>,
@@ -44,7 +44,7 @@ Retrieves a specific zombie given by the id *`{id}`*.
 The specific zombie object:
 
 *`JSON`*
-```json
+```
 {  
   "id": <number>,
   "name": <string>,
@@ -66,7 +66,7 @@ Creates a new zombie.
 #### Request body
 
 *`JSON`*
-```json
+```
 {
   "name": <string>
 }
@@ -78,7 +78,7 @@ Creates a new zombie.
 The new zombie object that was succesfully added:
 
 *`JSON`*
-```json
+```
 {
   "id": <number>,
   "name": <string>,
@@ -103,7 +103,7 @@ Updates the zombie with a given *`{id}`*.
 #### Request body
 
 *`JSON`*
-```json
+```
 {
   "name": <string>
 }
@@ -115,7 +115,7 @@ Updates the zombie with a given *`{id}`*.
 The updated zombie object:
 
 *`JSON`*
-```json
+```
 {
   "id": <number>,
   "name": <string>,
@@ -159,7 +159,7 @@ Retrieves a list of all the items belonging to the given zombie.
 The list of all the items belonging to the given zombie.
 
 *`JSON`*
-```json
+```
 [
   {  
     "id": <number>,
@@ -201,7 +201,7 @@ Retrieves an object containing total prices of all the items belonging to the gi
 #### Response body
 
 *`JSON`*
-```json
+```
 {
   "pln": <number>,
   "eur": <number>,
@@ -229,7 +229,7 @@ Retrieves a specific item belonging to the given zombie.
 A specific item object belonging to the given zombie.
 
 *`JSON`*
-```json
+```
 {  
   "id": <number>,
   "externalId": <number>,
@@ -266,7 +266,7 @@ Creates a single new item **or** many new items.
 Two variants are possible:
 
 *`JSON 1`*
-```json
+```
 {
   "externalId": <number>
 }
@@ -275,7 +275,7 @@ Two variants are possible:
 or
 
 *`JSON 2`*
-```json
+```
 {
   "externalIds": [
     <number>,
@@ -293,7 +293,7 @@ Two variants are possible:
 In case of including *`JSON 1`* in the request body:
 
 *`JSON`*
-```json
+```
 
 {  
   "id": <number>,
@@ -317,7 +317,7 @@ In case of including *`JSON 1`* in the request body:
 Or, in case of including *`JSON 2`* in the request body:
 
 *`JSON`*
-```json
+```
 [
   {  
     "id": <number>,
