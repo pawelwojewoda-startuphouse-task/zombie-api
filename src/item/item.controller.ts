@@ -45,7 +45,7 @@ export class ItemController {
 
   @Get('totals')
   public async findItemTotals(
-    @Param('zombieId') zombieId: number,
+    @Param('zombieId', ParseIntPipe) zombieId: number,
   ): Promise<TotalsRo> {
     return this.itemService.findTotals(zombieId);
   }
