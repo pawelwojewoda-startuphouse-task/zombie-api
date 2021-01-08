@@ -12,6 +12,24 @@ See [Workflow](docs/workflow.md) in the `docs` directory for the following infor
 * A word about testing (also [here](test/unit/README.md)),
 * Plans, improvements.
 
+## Try it out!
+
+The app has been hosted on the heroku platform for quick and easy prototyping.
+
+To try out some of the `GET` endpoints, click one of the following links:
+
+https://pawelwojewoda-zombie-api.herokuapp.com/zombies
+
+https://pawelwojewoda-zombie-api.herokuapp.com/zombies/2
+
+https://pawelwojewoda-zombie-api.herokuapp.com/zombies/2/items
+
+https://pawelwojewoda-zombie-api.herokuapp.com/zombies/2/items/3
+
+https://pawelwojewoda-zombie-api.herokuapp.com/zombies/2/items/totals
+
+For the rest of endpoints (`POST`s, `PUT` and `DELETE`s), see [Zombie REST API documentation](docs/index.md).
+
 ## Installation
 
 ```bash
