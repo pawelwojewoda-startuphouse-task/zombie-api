@@ -2,7 +2,7 @@
 
 ## Zombies
 
-### <span class="get">`GET` `api/zombies`</span>
+### <span style="color: blue">`GET`</span> `api/zombies`
 
 Retrieves a list of all the zombies.
 
@@ -31,7 +31,9 @@ The list of all the zombies:
 #### Response codes
 * `200` The list of all the zombies was retrieved successfully.
 
-### <span class="get">`GET` <code>api/zombies/*{id}*</code></span>
+<hr>
+
+### <span style="color: blue">`GET`</span> <code>api/zombies/*{id}*</code>
 
 Retrieves a specific zombie given by the id *`{id}`*.
 
@@ -59,7 +61,9 @@ The specific zombie object:
 * `200` The specific zombie was found and retrieved.
 * `404` Could not find the given zombie.
 
-### <span class="post">`POST` `api/zombies`</span>
+<hr>
+
+### <span style="color: green">`POST`</span> `api/zombies`
 
 Creates a new zombie.
 
@@ -92,7 +96,9 @@ The new zombie object that was succesfully added:
 #### Response codes
 * `201` The new zombie was created successfully.
 
-### <span class="put">`PUT` <code>api/zombies/*{id}*</code></span>
+<hr>
+
+### <span style="color: orange">`PUT`</span> <code>api/zombies/*{id}*</code>
 
 Updates the zombie with a given *`{id}`*.
 
@@ -130,7 +136,9 @@ The updated zombie object:
 * `201` The specific zombie was updated successfully.
 * `404` The zombie to be updated was not found.
 
-### <span class="delete">`DELETE` <code>api/zombies/*{id}*</code></span>
+<hr>
+
+### <span style="color: red">`DELETE`</span> <code>api/zombies/*{id}*</code>
 
 Deletes a specific zombie given by the id *`{id}`*.
 
@@ -146,8 +154,7 @@ Deletes a specific zombie given by the id *`{id}`*.
 
 ## Items
 
-
-### <span class="get">`GET` <code>api/zombies/*{zombie-id}*/items</code></span>
+### <span style="color: blue">`GET`</span> <code>api/zombies/*{zombie-id}*/items</code>
 
 Retrieves a list of all the items belonging to the given zombie.
 
@@ -190,7 +197,9 @@ The list of all the items belonging to the given zombie.
 * `200` The list of all the items owned by the given zombie was retrieved successfully.
 * `404` Could not find the given zombie.
 
-### <span class="get">`GET` <code>api/zombies/*{zombie-id}*/items/totals</code></span>
+<hr>
+
+### <span style="color: blue">`GET`</span> <code>api/zombies/*{zombie-id}*/items/totals</code>
 
 Retrieves an object containing total prices of all the items belonging to the given zombie in three different currencies.
 
@@ -216,7 +225,9 @@ Retrieves an object containing total prices of all the items belonging to the gi
 * `200` The object containing total prices was retrieved successfully.
 * `404` Could not find the given zombie.
 
-### <span class="get">`GET` <code>api/zombies/*{zombie-id}*/items/*{item-id}*</code></span>
+<hr>
+
+### <span style="color: blue">`GET`</span> <code>api/zombies/*{zombie-id}*/items/*{item-id}*</code>
 
 Retrieves a specific item belonging to the given zombie.
 
@@ -254,7 +265,9 @@ A specific item object belonging to the given zombie.
 * `404` Could not find the given zombie.
 * `404` Could not find the specific item.
 
-### <span class="post">`POST` <code>api/zombies/*{zombie-id}*/items</code></span>
+<hr>
+
+### <span style="color: green">`POST`</span> <code>api/zombies/*{zombie-id}*/items</code>
 
 Creates a single new item **or** many new items.
 
@@ -347,9 +360,11 @@ Or, in case of including *`JSON 2`* in the request body:
 * `201` Item(s) were successfully added to the zombie.
 * `403` Tried to add the number of item(s), which would result in exceeding the maximum number of items per zombie. 
 
-<strong class="caution">This is a costly operation paid for each single request.</strong>
+<strong style="color: #d30;">This is a costly operation paid for each single request.</strong>
 
-### <span class="delete">`DELETE` <code>api/zombies/*{zombie-id}*/items/*{item-id}*</code></span>
+<hr>
+
+### <span style="color: red;">`DELETE`</span> <code>api/zombies/*{zombie-id}*/items/*{item-id}*</code>
 
 Deletes a specific item belonging to the given zombie.
 
@@ -361,34 +376,4 @@ Deletes a specific item belonging to the given zombie.
 * `200` The specific item was successfully deleted.
 * `404` The item to be deleted was not found.
 
-<style>
-  h3 {
-    border-bottom: 0.1em solid #eee;
-    padding-bottom: 0.25em;
-    margin-top: 2em !important;
-  }
-  .get :first-child:not(em) {
-    color: blue;
-  }
-  .post :first-child:not(em) {
-    color: green;
-  }
-  .put :first-child:not(em) {
-    color: orange;
-  }
-  .delete :first-child:not(em) {
-    color: red;
-  }
-  em > code,
-  code > em {
-    font-weight: 700;
-    font-style: normal !important;
-    color: #aaa !important;
-  }
-  strong.caution {
-      color: #d30;
-  }
-  strong.caution:before {
-      content: 'Note: '
-  }
-</style>
+<hr>
