@@ -28,6 +28,13 @@ export class ItemController {
       : this.itemService.createOne(zombieId, dto as CreateOneItemDto);
   }
 
+  @Get('totals')
+  public async findItemTotals(
+    @Param('zombieId', ParseIntPipe) zombieId: number,
+  ): Promise<TotalsRo> {
+    return this.itemService.findTotals(zombieId);
+  }
+
   @Get(':id')
   public async findOne(
     @Param('zombieId', ParseIntPipe) zombieId: number,
@@ -41,13 +48,6 @@ export class ItemController {
     @Param('zombieId', ParseIntPipe) zombieId: number,
   ): Promise<ItemRo[]> {
     return this.itemService.findAll(zombieId);
-  }
-
-  @Get('totals')
-  public async findItemTotals(
-    @Param('zombieId', ParseIntPipe) zombieId: number,
-  ): Promise<TotalsRo> {
-    return this.itemService.findTotals(zombieId);
   }
 
   @Delete(':id')
