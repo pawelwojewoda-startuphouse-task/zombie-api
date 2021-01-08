@@ -1,0 +1,16 @@
+server:
+  port: 3000
+
+db:
+  type: 'postgres'
+  port: 5432
+  database: 'zombieapidb'
+
+currencyApi:
+  url: http://api.nbp.pl/api/exchangerates/tables/c
+
+itemPurchaseApi:
+  url: https://zombie-items-api.herokuapp.com/api/items
+
+logic:
+  maximumItemsPerZombieCount: 5
